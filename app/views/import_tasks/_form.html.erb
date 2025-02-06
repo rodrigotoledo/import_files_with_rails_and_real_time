@@ -1,0 +1,22 @@
+<%= form_with(model: import_task) do |form| %>
+  <% if import_task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(import_task.errors.count, "error") %> prohibited this import_task from being saved:</h2>
+
+      <ul>
+        <% import_task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :file, style: "display: block" %>
+    <%= form.file_field :file, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

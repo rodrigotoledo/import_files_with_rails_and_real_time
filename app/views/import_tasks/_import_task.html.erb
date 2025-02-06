@@ -1,0 +1,7 @@
+<div id="<%= dom_id import_task %>">
+  <p>
+    <strong>Status at:</strong>
+    <%= import_task.status_at.nil? ? 'Created' : time_ago_in_words(import_task.status_at) %>
+  </p>
+
+</div>

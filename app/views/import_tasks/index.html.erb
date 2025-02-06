@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Import tasks" %>
+
+<h1>Import tasks</h1>
+
+<div id="import_tasks">
+  <% @import_tasks.each do |import_task| %>
+    <%= render import_task %>
+  <% end %>
+</div>
+
+<%= link_to "New import task", new_import_task_path %>

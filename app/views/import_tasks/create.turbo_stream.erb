@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "last_import_tasks" do %>
+<%= render partial: "tasks/list", locals: { tasks: @tasks } %>
+<% end %>

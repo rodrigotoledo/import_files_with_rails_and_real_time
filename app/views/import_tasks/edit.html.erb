@@ -1,0 +1,12 @@
+<% content_for :title, "Editing import task" %>
+
+<h1>Editing import task</h1>
+
+<%= render "form", import_task: @import_task %>
+
+<br>
+
+<div>
+  <%= link_to "Show this import task", @import_task %> |
+  <%= link_to "Back to import tasks", import_tasks_path %>
+</div>
